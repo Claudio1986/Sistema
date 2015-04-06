@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteCliente" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18e43d0e-cb16-4b3f-b533-f034da3e2304">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cliente.`CODCLIENTE` AS cliente_CODCLIENTE,
+     cliente.`CLAVE` AS cliente_CLAVE,
+     cliente.`DIRECCION` AS cliente_DIRECCION,
+     cliente.`DNI` AS cliente_RUT
+FROM
+     `cliente` cliente]]>
+	</queryString>
+	<field name="cliente_CODCLIENTE" class="java.lang.Integer"/>
+	<field name="cliente_DIRECCION" class="java.lang.String"/>
+	<field name="cliente_RUT" class="java.lang.String"/>
+	<group name="cliente_CODCLIENTE">
+		<groupExpression><![CDATA[$F{cliente_CODCLIENTE}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="930a8bf9-435a-4f90-8c33-3f58e0512a04" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_CODCLIENTE]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="5391f034-877d-4c55-9a06-4c25134d5627" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_CODCLIENTE}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="83288ba4-3ac0-420d-a219-27971857d535" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="cliente_DIRECCION">
+		<groupExpression><![CDATA[$F{cliente_DIRECCION}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="03672468-2268-4096-8d60-cb451d670642" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_DIRECCION}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="07540ab3-e5a0-4fd6-845c-841b2e1b3632" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_DIRECCION]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="cliente_RUT">
+		<groupExpression><![CDATA[$F{cliente_RUT}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="8338ce21-8c7a-4fa4-8c53-fb89b3fb73af" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_RUT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="7c7bb506-58dc-4a7b-a037-3e640b24ac97" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_RUT]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="24ba050a-345c-4168-9f5b-a33049dfff70" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="3e31b971-27bb-48a0-83dd-08fb0a017753" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Usuarios]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="2cf92877-bf7e-4727-b9d5-3d02676d9602" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Datos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="bb963505-59d6-4a5b-8ffe-59ae7c02d6e2" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="9bb993b7-d8fa-49c8-86ac-afce52a8ffc7" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="8b68179f-d36a-463d-86f4-4909c2a350dd" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="1e3ae5a5-61d1-4e7b-892b-8de1768a2f9c" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="d32ade0f-116a-42fd-a371-1f62fdbcce16" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1Proveedor" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e8bef91-28d4-4a03-84ab-3b3d167e0769">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     proveedor.`CODPROVEEDOR` AS proveedor_CODPROVEEDOR,
+     proveedor.`CODPRODUCTO` AS proveedor_CODPRODUCTO,
+     proveedor.`RUCPROVEEDOR` AS proveedor_RUCPROVEEDOR,
+     proveedor.`NOMBRE` AS proveedor_NOMBRE,
+     proveedor.`TELEFONO` AS proveedor_TELEFONO,
+     proveedor.`DIRECCION` AS proveedor_DIRECCION
+FROM
+     `proveedor` proveedor]]>
+	</queryString>
+	<field name="proveedor_CODPROVEEDOR" class="java.lang.Integer"/>
+	<field name="proveedor_CODPRODUCTO" class="java.lang.Integer"/>
+	<field name="proveedor_RUCPROVEEDOR" class="java.lang.String"/>
+	<field name="proveedor_NOMBRE" class="java.lang.String"/>
+	<field name="proveedor_TELEFONO" class="java.lang.String"/>
+	<field name="proveedor_DIRECCION" class="java.lang.String"/>
+	<group name="proveedor_CODPROVEEDOR">
+		<groupExpression><![CDATA[$F{proveedor_CODPROVEEDOR}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="9226a044-3192-4302-ae27-f7fa88e5d5f9" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[proveedor_CODPROVEEDOR]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="517aaca5-2736-44fd-ba6d-740f0f615589" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proveedor_CODPROVEEDOR}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="39ec891e-be6d-4cc9-9225-0216e8126d01" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="proveedor_CODPRODUCTO">
+		<groupExpression><![CDATA[$F{proveedor_CODPRODUCTO}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="baaaf45f-6df0-4d1d-a228-47279a5ea5ee" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proveedor_CODPRODUCTO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="a745febf-cf96-4392-8f1f-b5ba484bdbd3" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[proveedor_CODPRODUCTO]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="proveedor_NOMBRE">
+		<groupExpression><![CDATA[$F{proveedor_NOMBRE}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="5740efd6-3699-4eb7-97e4-25eeaeed30be" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proveedor_NOMBRE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="29c48ec2-d995-4b4f-8803-612b23b7d37f" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[proveedor_NOMBRE]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="proveedor_TELEFONO">
+		<groupExpression><![CDATA[$F{proveedor_TELEFONO}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="0798e202-ee8f-4d91-8bc2-01f7a261d3c9" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{proveedor_TELEFONO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="8e1922e9-2d52-478e-822c-efc85fc553b9" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[proveedor_TELEFONO]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="2897779a-4ae8-4c92-8532-86d9f7c1a62f" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="6a93e6c1-19c4-4b7f-9518-8b090bb40b5d" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROVEEDOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="adbcb051-4cd1-4fac-bb3d-489d0e77a547" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="60f93501-9a9b-4103-88ac-1e9c281bac56" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="537aea48-43c9-4584-bb18-b34a77daaa50" mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[proveedor_RUCPROVEEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e86844e4-c0c7-4149-b5d8-05869c7604c8" mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[proveedor_DIRECCION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="97351fe8-6160-4e3a-99f4-a829097e74e0" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="0d0b3f25-3f2a-45f3-95d3-e22e878d2175" x="0" y="0" width="277" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{proveedor_RUCPROVEEDOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="003583ec-eb81-422b-8797-eb0000e69de2" x="277" y="0" width="277" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{proveedor_DIRECCION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="31f49f3d-c068-45cb-8a46-63f23189454c" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="5fe43b6f-b479-4c72-b01e-12df87c0b1da" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e0890c36-b291-4f7b-8bcd-2e3c55b1dfff" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

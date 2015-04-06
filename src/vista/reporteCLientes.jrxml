@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteCLientes" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7d833774-f997-4913-aab3-2b3396028138">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cliente.`CODCLIENTE` AS cliente_CODCLIENTE,
+     cliente.`CLAVE` AS cliente_CLAVE,
+     cliente.`DIRECCION` AS cliente_DIRECCION,
+     cliente.`DNI` AS cliente_RUT
+FROM
+     `cliente` cliente]]>
+	</queryString>
+	<field name="cliente_CODCLIENTE" class="java.lang.Integer"/>
+	<field name="cliente_DIRECCION" class="java.lang.String"/>
+	<field name="cliente_RUT" class="java.lang.String"/>
+	<group name="cliente_CODCLIENTE">
+		<groupExpression><![CDATA[$F{cliente_CODCLIENTE}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="112b6838-78d0-470d-bbe0-9d8a03a2a81f" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_CODCLIENTE]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="3a000778-d74b-424e-add0-70674455cf97" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_CODCLIENTE}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="f14e3f99-aa2c-4cc9-a217-3137ce176aa7" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="cliente_DIRECCION">
+		<groupExpression><![CDATA[$F{cliente_DIRECCION}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="51bc6903-6dc0-4b44-a0e8-ffdf29ca2ec2" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_DIRECCION}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="43381c83-4c64-41e7-91bc-8191770a8dc6" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_DIRECCION]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="cliente_RUT">
+		<groupExpression><![CDATA[$F{cliente_RUT}]]></groupExpression>
+		<groupHeader>
+			<band height="32">
+				<textField>
+					<reportElement uuid="ffd378b5-dcac-4d5b-b93d-4b42d4fb3e05" x="100" y="0" width="455" height="32" forecolor="#006699"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_RUT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="a23ebe2f-5ea9-46a4-8ed5-145e568ef9cb" x="0" y="0" width="100" height="20" forecolor="#666666"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[cliente_RUT]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="b901dfb6-6289-4863-8acb-989e3d489186" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="1251f2d4-4969-466a-90e2-4e3c605337cb" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CLIENTES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="e6669b65-fac6-4427-a59e-cc3a9ddd8117" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DATOS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="82e00885-773e-4484-a224-dc9b987028df" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="d0a10cca-e456-484e-b2fc-e2911bf415d4" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="e07bf9bc-bc37-4d1e-8c16-4d885e94c90c" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="86e94046-9434-4a33-8675-e8626d217a99" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="495e819c-31e6-43c4-9b4c-2f0bbf8cd26d" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
